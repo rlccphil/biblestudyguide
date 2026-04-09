@@ -824,6 +824,63 @@
     line-height: 1.65;
   }
 
+  /* ── DAILY DEVOTIONS CTA ── */
+  .cta-devotions {
+    margin-top: 16px;
+    background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-mid) 100%);
+    border-radius: 12px;
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .cta-devotions-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.45;
+  }
+
+  .cta-devotions-text strong {
+    display: block;
+    font-style: normal;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 4px;
+  }
+
+  .cta-devotions-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold);
+    color: white;
+    text-decoration: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 11px 22px;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.15s;
+    flex-shrink: 0;
+  }
+
+  .cta-devotions-btn:hover {
+    background: var(--gold-light);
+    color: var(--forest-dark);
+    transform: translateY(-2px);
+  }
+
   /* ── PRAYER LINE ── */
   .prayer-prompt {
     background: linear-gradient(to right, var(--forest-dark), var(--forest));
@@ -1098,6 +1155,11 @@
 
     <div class="podcast-line">🎧 <em>For deeper reflection, catch the full sermon "Portrait of a New Creation" on the RLCC podcast or app.</em></div>
 
+    <div class="cta-devotions">
+      <div class="cta-devotions-text"><strong>Daily Devotions</strong>Listen to our Daily Devotions and stay rooted in God's Word every day.</div>
+      <a href="https://rlccphil.churchcenter.com/home" target="_blank" rel="noopener" class="cta-devotions-btn">▶ Listen Now</a>
+    </div>
+
     <div class="day-nav">
       <button class="nav-btn" onclick="switchTabByIndex(0)">← How to Use</button>
       <button class="nav-btn" onclick="switchTabByIndex(2)">Day 2 →</button>
@@ -1143,10 +1205,9 @@
           <span class="journal-label">Your Response</span>
           <textarea class="journal-textarea" id="journal-day2" placeholder="Write your honest reflection here…"></textarea>
           <div class="journal-actions">
-            <button class="btn-save" onclick="saveJournal('day2')">Save Note</button>
+            <button class="btn-email" onclick="openEmailModal('day2')">✉ Email This Note</button>
             <button class="btn-clear" onclick="clearJournal('day2')">Clear</button>
           </div>
-          <div class="save-confirm" id="confirm-day2">✓ Saved</div>
         </div>
       </div>
     </div>
@@ -1183,6 +1244,11 @@
     </div>
 
     <div class="podcast-line">🎧 <em>For deeper reflection, catch the full sermon "Portrait of a New Creation" on the RLCC podcast or app.</em></div>
+
+    <div class="cta-devotions">
+      <div class="cta-devotions-text"><strong>Daily Devotions</strong>Listen to our Daily Devotions and stay rooted in God's Word every day.</div>
+      <a href="https://rlccphil.churchcenter.com/home" target="_blank" rel="noopener" class="cta-devotions-btn">▶ Listen Now</a>
+    </div>
 
     <div class="day-nav">
       <button class="nav-btn" onclick="switchTabByIndex(1)">← Day 1</button>
@@ -1229,10 +1295,9 @@
           <span class="journal-label">Your Response</span>
           <textarea class="journal-textarea" id="journal-day3" placeholder="Write your honest reflection here…"></textarea>
           <div class="journal-actions">
-            <button class="btn-save" onclick="saveJournal('day3')">Save Note</button>
+            <button class="btn-email" onclick="openEmailModal('day3')">✉ Email This Note</button>
             <button class="btn-clear" onclick="clearJournal('day3')">Clear</button>
           </div>
-          <div class="save-confirm" id="confirm-day3">✓ Saved</div>
         </div>
       </div>
     </div>
@@ -1269,6 +1334,11 @@
     </div>
 
     <div class="podcast-line">🎧 <em>For deeper reflection, catch the full sermon "Portrait of a New Creation" on the RLCC podcast or app.</em></div>
+
+    <div class="cta-devotions">
+      <div class="cta-devotions-text"><strong>Daily Devotions</strong>Listen to our Daily Devotions and stay rooted in God's Word every day.</div>
+      <a href="https://rlccphil.churchcenter.com/home" target="_blank" rel="noopener" class="cta-devotions-btn">▶ Listen Now</a>
+    </div>
 
     <div class="day-nav">
       <button class="nav-btn" onclick="switchTabByIndex(2)">← Day 2</button>
@@ -1315,10 +1385,9 @@
           <span class="journal-label">Your Response</span>
           <textarea class="journal-textarea" id="journal-day4" placeholder="Write your honest reflection here…"></textarea>
           <div class="journal-actions">
-            <button class="btn-save" onclick="saveJournal('day4')">Save Note</button>
+            <button class="btn-email" onclick="openEmailModal('day4')">✉ Email This Note</button>
             <button class="btn-clear" onclick="clearJournal('day4')">Clear</button>
           </div>
-          <div class="save-confirm" id="confirm-day4">✓ Saved</div>
         </div>
       </div>
     </div>
@@ -1355,6 +1424,11 @@
     </div>
 
     <div class="podcast-line">🎧 <em>For deeper reflection, catch the full sermon "Portrait of a New Creation" on the RLCC podcast or app.</em></div>
+
+    <div class="cta-devotions">
+      <div class="cta-devotions-text"><strong>Daily Devotions</strong>Listen to our Daily Devotions and stay rooted in God's Word every day.</div>
+      <a href="https://rlccphil.churchcenter.com/home" target="_blank" rel="noopener" class="cta-devotions-btn">▶ Listen Now</a>
+    </div>
 
     <div class="day-nav">
       <button class="nav-btn" onclick="switchTabByIndex(3)">← Day 3</button>
@@ -1401,10 +1475,9 @@
           <span class="journal-label">Your Response</span>
           <textarea class="journal-textarea" id="journal-day5" placeholder="Write your honest reflection here…"></textarea>
           <div class="journal-actions">
-            <button class="btn-save" onclick="saveJournal('day5')">Save Note</button>
+            <button class="btn-email" onclick="openEmailModal('day5')">✉ Email This Note</button>
             <button class="btn-clear" onclick="clearJournal('day5')">Clear</button>
           </div>
-          <div class="save-confirm" id="confirm-day5">✓ Saved</div>
         </div>
       </div>
     </div>
@@ -1442,6 +1515,15 @@
 
     <div class="podcast-line">🎧 <em>For deeper reflection, catch the full sermon "Portrait of a New Creation" on the RLCC podcast or app.</em></div>
 
+    <div class="cta-devotions">
+      <div class="cta-devotions-text"><strong>Daily Devotions</strong>Listen to our Daily Devotions and stay rooted in God's Word every day.</div>
+      <a href="https://rlccphil.churchcenter.com/home" target="_blank" rel="noopener" class="cta-devotions-btn">▶ Listen Now</a>
+    </div>
+
+    <div style="text-align:center; margin-top:20px;">
+      <button class="btn-email-all" onclick="openEmailModal('all')">✉ Email All My Notes (Days 1–5)</button>
+    </div>
+
     <div class="day-nav">
       <button class="nav-btn" onclick="switchTabByIndex(4)">← Day 4</button>
       <button class="nav-btn" disabled>You've finished! ✦</button>
@@ -1449,6 +1531,29 @@
   </section>
 
 </main>
+
+<!-- EMAIL MODAL -->
+<div class="modal-overlay" id="emailModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <div class="modal-title">✉ Email Your Reflection</div>
+    <p class="modal-subtitle">Enter a recipient address below. You can send this to yourself or to a spiritual director, mentor, or Life Group leader.</p>
+
+    <div class="modal-field">
+      <label>Send To</label>
+      <input type="email" id="modal-to" placeholder="e.g. yourname@email.com" />
+    </div>
+
+    <div class="modal-preview-label" id="modal-preview-label">Note Preview</div>
+    <div class="modal-preview" id="modal-preview"></div>
+
+    <div class="modal-actions">
+      <button class="btn-modal-send" onclick="sendEmail()">Open in Email App</button>
+      <button class="btn-modal-cancel" onclick="closeModal()">Cancel</button>
+    </div>
+    <p class="modal-note">This opens your device's email app with your notes pre-filled. Nothing is sent automatically.</p>
+  </div>
+</div>
 
 <footer class="site-footer">
   <div>Real Life Christian Communities &nbsp;·&nbsp; <a href="https://rlcc.ph">rlcc.ph</a></div>
@@ -1459,44 +1564,135 @@
 <script>
   const tabIds = ['intro','day1','day2','day3','day4','day5'];
 
+  const dayTitles = {
+    day1: 'Day 1 – From Empty Pursuits to Lasting Purpose',
+    day2: 'Day 2 – When You Can\'t Change Yourself on Your Own',
+    day3: 'Day 3 – Finding Joy When Life Falls Apart',
+    day4: 'Day 4 – Turning Your Daily Grind into a Divine Mission',
+    day5: 'Day 5 – The Power of a Life That Inspires Others'
+  };
+
+  const dayScriptures = {
+    day1: '1 Thessalonians 1:9-10',
+    day2: '1 Thessalonians 1:4-5',
+    day3: '1 Thessalonians 1:6',
+    day4: '1 Thessalonians 1:8',
+    day5: '1 Thessalonians 1:7, 9'
+  };
+
+  let currentModalDay = null;
+
   function switchTab(id, btn) {
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+    document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
     document.getElementById('panel-' + id).classList.add('active');
     if (btn) { btn.classList.add('active'); btn.setAttribute('aria-selected','true'); }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   function switchTabByIndex(i) {
-    const id = tabIds[i];
-    const btn = document.querySelectorAll('.tab-btn')[i];
+    var id = tabIds[i];
+    var btn = document.querySelectorAll('.tab-btn')[i];
     switchTab(id, btn);
   }
 
   function toggleAcc(header) {
-    const body = header.nextElementSibling;
-    const isOpen = header.classList.contains('open');
+    var body = header.nextElementSibling;
+    var isOpen = header.classList.contains('open');
     header.classList.toggle('open', !isOpen);
     body.classList.toggle('open', !isOpen);
   }
 
-  function saveJournal(day) {
-    const val = document.getElementById('journal-' + day).value;
-    localStorage.setItem('rlcc-journal-' + day, val);
-    const conf = document.getElementById('confirm-' + day);
-    conf.style.display = 'flex';
-    setTimeout(() => { conf.style.display = 'none'; }, 2200);
-  }
-
   function clearJournal(day) {
     document.getElementById('journal-' + day).value = '';
-    localStorage.removeItem('rlcc-journal-' + day);
   }
 
-  // Load saved journals on page load
-  ['day1','day2','day3','day4','day5'].forEach(function(d) {
-    var saved = localStorage.getItem('rlcc-journal-' + d);
-    if (saved) { document.getElementById('journal-' + d).value = saved; }
+  function openEmailModal(day) {
+    currentModalDay = day;
+    var preview = document.getElementById('modal-preview');
+    var label = document.getElementById('modal-preview-label');
+
+    if (day === 'all') {
+      label.textContent = 'All Notes Preview (Days 1–5)';
+      var allText = 'Portrait of a New Creation — My Devotional Reflections\n';
+      allText += '=====================================================\n\n';
+      var hasAny = false;
+      ['day1','day2','day3','day4','day5'].forEach(function(d) {
+        var note = document.getElementById('journal-' + d).value.trim();
+        if (note) {
+          allText += dayTitles[d] + '\n';
+          allText += '(' + dayScriptures[d] + ')\n\n';
+          allText += note + '\n\n---\n\n';
+          hasAny = true;
+        }
+      });
+      if (!hasAny) {
+        preview.textContent = '(No notes written yet across any of the five days.)';
+      } else {
+        preview.textContent = allText.trim();
+      }
+    } else {
+      label.textContent = 'Note Preview — ' + dayTitles[day].split('–')[0].trim();
+      var note = document.getElementById('journal-' + day).value.trim();
+      preview.textContent = note || '(No note written yet for this day.)';
+    }
+
+    document.getElementById('modal-to').value = '';
+    document.getElementById('emailModal').classList.add('open');
+    setTimeout(function() { document.getElementById('modal-to').focus(); }, 100);
+  }
+
+  function closeModal() {
+    document.getElementById('emailModal').classList.remove('open');
+    currentModalDay = null;
+  }
+
+  function sendEmail() {
+    var to = document.getElementById('modal-to').value.trim();
+    if (!to) {
+      document.getElementById('modal-to').focus();
+      document.getElementById('modal-to').style.borderColor = 'var(--accent-rose)';
+      setTimeout(function() { document.getElementById('modal-to').style.borderColor = ''; }, 1800);
+      return;
+    }
+
+    var subject, body;
+
+    if (currentModalDay === 'all') {
+      subject = 'My Reflections – Portrait of a New Creation (All 5 Days)';
+      body = 'Portrait of a New Creation — My Devotional Reflections\n=====================================================\n\n';
+      ['day1','day2','day3','day4','day5'].forEach(function(d) {
+        var note = document.getElementById('journal-' + d).value.trim();
+        if (note) {
+          body += dayTitles[d] + '\n(' + dayScriptures[d] + ')\n\n' + note + '\n\n---\n\n';
+        }
+      });
+      body += '\nSent from the RLCC Devotional – Portrait of a New Creation\nhttps://rlcc.ph';
+    } else {
+      subject = 'My Reflection – ' + dayTitles[currentModalDay];
+      var note = document.getElementById('journal-' + currentModalDay).value.trim();
+      body = dayTitles[currentModalDay] + '\n';
+      body += dayScriptures[currentModalDay] + '\n\n';
+      body += (note || '(No note written.)') + '\n\n';
+      body += '---\nSent from the RLCC Devotional – Portrait of a New Creation\nhttps://rlcc.ph';
+    }
+
+    var mailto = 'mailto:' + encodeURIComponent(to)
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+
+    window.location.href = mailto;
+    closeModal();
+  }
+
+  // Close modal on overlay click
+  document.getElementById('emailModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+
+  // Close modal on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
   });
 </script>
 </body>
